@@ -1,0 +1,44 @@
+# Compiled object files
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.a
+*.lib
+
+# Executable files
+*.exe
+*.out
+*.app
+*.elf
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# CMake build directory
+/build/
+cmake-build-*/
+
+# Visual Studio Code settings
+.vscode/
+
+# CLion settings
+.idea/
+
+# Mac OS files
+.DS_Store
+
+# Other
+*.log
