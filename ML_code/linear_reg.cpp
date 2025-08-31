@@ -61,5 +61,5 @@ int main(){
     cout<<"The initial cost is:"<<cal_cost(w,b,x,y,m)<<endl;
     parameters res=gradient_descent(w,b,x,y,m,1000000);
     cout<<"w:"<<res.w<<"\n"<<"b:"<<res.b<<"\n";
-    cout<<"The initial cost is:"<<cal_cost(res.w,res.b,x,y,m)<<endl;
+    cout<<"The final cost is:"<<cal_cost(res.w,res.b,x,y,m)<<endl;
 }
