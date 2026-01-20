@@ -1,6 +1,6 @@
 class NumArray {
-    vector<int> prefix;
 public:
+    vector<int> prefix;
     NumArray(vector<int>& nums) {
         prefix.resize(nums.size()+1,0);
         for (int i=0;i<nums.size();i++){
