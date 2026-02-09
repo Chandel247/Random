@@ -45,3 +45,5 @@ cmake-build-*/
 
 *.csv
 *.zip
+*.ipynb
+test.*
