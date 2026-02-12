@@ -1,32 +1,24 @@
 #include <iostream>
 using namespace std;
 
-int decToBinary(int decNum){
-	int ans=0, pow=1;
-
-	while(decNum>0){
-		int rem=decNum%2;
-		decNum=decNum/2;
-		
-		ans+=(rem*pow);
-		pow*=10;
-	}
-	return ans;
-}
-
-int binToDec(int binNum){
-	int ans=0,pow=1;
-	while(binNum>0){
-		int rem=binNum%10;
-		ans+=rem*pow;
-
-		binNum/=10;
-		pow*=2;
-	}
-	return ans;
+int subarraySum(vector<int> &nums, int k)
+{
+    unordered_map<int, int> table = {{0, 1}};
+    int sum = 0;
+    int ans = 0;
+    int n = nums.size();
+    for (int i = 0; i < n; i++)
+    {
+        sum += nums[i];
+        int comp = sum - k;
+        ans += table[comp];
+        table[sum]++;
+    }
+    return ans;
 }
 
 int main(){
-	cout<<binToDec(1010)<<endl;
+    vector<int> arr={1,2,3};
+    cout<<subarraySum(arr,3)<<endl;
 	return 0;
 }
