@@ -21,7 +21,6 @@ public:
                 temp=temp->next;
             }
             else if (temp->next->val==val){
-                ListNode* temp2=temp->next;
                 temp->next=temp->next->next;
             }
         }
