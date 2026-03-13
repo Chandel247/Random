@@ -5,10 +5,10 @@ public:
     }
     
     int ping(int t) {
-        while (!calls.empty() && calls.front()<t-3000){
+        calls.push(t);
+        while (calls.front()<t-3000){
             calls.pop();
         }
-        calls.push(t);
         return calls.size();
     }
 };
